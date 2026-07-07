@@ -3,31 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하이원 워터월드 | 프리미엄 산악형 워터파크</title>
+    <title>하이원 워터월드 | 올여름 가장 시원한 하루</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Pretendard', system-ui, sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1587502537745-84b86d3a7e6e');
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1587502537745-84b86d3a7e6e');
             background-size: cover;
             background-position: center;
         }
+        .section-title {
+            font-size: 2.75rem;
+            line-height: 1.1;
+        }
     </style>
 </head>
-<body class="bg-[#F7FBFF]">
+<body class="bg-white text-gray-900">
     <!-- Hero -->
-    <header class="hero-bg h-screen flex items-center text-white">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h1 class="text-6xl md:text-7xl font-bold mb-6">올여름,<br>가장 시원한 하루를 만나다</h1>
-            <p class="text-2xl mb-12">푸른 산속에서 즐기는 프리미엄 워터파크</p>
-            <button class="bg-white text-[#0077C8] px-12 py-5 rounded-2xl text-xl font-semibold">지금 예약하기</button>
+    <section class="hero-bg h-screen flex items-center text-white relative">
+        <div class="max-w-5xl mx-auto px-6 text-center z-10">
+            <p class="text-lg tracking-widest mb-4">국내 대표 산악형 프리미엄 워터파크</p>
+            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">
+                올여름,<br>가장 시원한 하루를<br>만나다
+            </h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-12">
+                푸른 자연 속에서 즐기는 프리미엄 워터파크,<br>
+                하이원 워터월드에서 특별한 여름을 경험하세요.
+            </p>
+            <button onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})"
+                    class="bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
+                시설 둘러보기
+            </button>
         </div>
-    </header>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </div>
+    </section>
 
-    <!-- 더 많은 섹션은 이전에 드린 코드 참고 -->
-    <footer class="bg-gray-900 text-gray-400 py-16 text-center">
-        <p>Copyright © 2026 하이원 워터월드</p>
+    <!-- Features -->
+    <section id="features" class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Water World Experience</h2>
+                <p class="text-3xl font-medium">자연 속에서 완성되는<br>프리미엄 물놀이의 정점</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-10 rounded-3xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6">365일 사계절 운영</h3>
+                    <p class="text-gray-600">해발 고지대의 청정한 공기와 함께 즐기는 하이원 워터월드. 언제 방문해도 완벽한 하루를 선사합니다.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6">실내 · 실외 워터시설</h3>
+                    <p class="text-gray-600">익스트림 슬라이드, 파도풀, 유수풀까지. 가족과 커플 모두를 위한 다채로운 어트랙션.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6">숲과 함께하는 힐링</h3>
+                    <p class="text-gray-600">울창한 숲과 산자락에 둘러싸인 프리미엄 스파와 휴식 공간.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Facilities -->
+    <section class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold">Premium Facilities</h2>
+                <p class="text-3xl mt-4">즐길 거리가 가득한 하이원의 시그니처 시설</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1015/600/400" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold">파도풀</h3>
+                        <p class="text-gray-600 mt-2">탁 트인 야외에서 실제 바다 같은 파도를 즐기는 대형 파도풀</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/106/600/400" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold">익스트림 슬라이드</h3>
+                        <p class="text-gray-600 mt-2">아찔한 높이에서 쏟아지는 스릴 만점의 워터슬라이드</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/133/600/400" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold">유수풀</h3>
+                        <p class="text-gray-600 mt-2">잔잔히 흐르는 물길을 따라 여유롭게 즐기는 힐링 공간</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-r from-blue-600 to-cyan-500 py-24 text-white text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-6">이번 여름, 하이원 워터월드에서<br>특별한 추억을 만들어보세요.</h2>
+            <button class="bg-white text-blue-600 px-12 py-5 rounded-full text-xl font-semibold hover:bg-gray-100 transition">
+                예약하기 →
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-white text-3xl font-bold mb-4">하이원 워터월드</h3>
+            <p>강원도 정선군 사북읍 하이원길 265</p>
+            <p class="mt-8">Copyright © 2026 High1 Water World. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
